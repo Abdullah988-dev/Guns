@@ -1,0 +1,27 @@
+
+  .weapon-card {
+    width: 18rem;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .weapon-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+
+  .weapon-card img {
+    height: 200px;        /* 👈 sab images same height */
+    object-fit: cover;   /* 👈 image stretch nahi hogi */
+  }
+
+  .weapon-card .card-title {
+    font-weight: 600;
+  }
+
+  .weapon-card .btn {
+    border-radius: 25px;
+    padding: 6px 20px;
+  }
+
