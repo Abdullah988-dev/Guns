@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About - Weapon Guide</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="shortcut icon" href="/assests/image/ChatGPT Image Dec 19, 2025, 08_19_34 PM.png" type="image/x-icon">
+  <link rel="shortcut icon" href="assests/image/ChatGPT Image Dec 19, 2025, 08_19_34 PM.png" type="image/x-icon">
 
   <style>
     body {
@@ -28,7 +29,7 @@
       padding: 30px;
       border-radius: 15px;
       margin: 30px auto;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     }
 
     .about-section h3 {
@@ -42,13 +43,13 @@
 
     .weapon-summary .card {
       border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease;
     }
 
     .weapon-summary .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     }
 
     .weapon-summary img {
@@ -72,93 +73,140 @@
     }
   </style>
 </head>
+
 <body>
 
-<div class="container">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+    <a class="navbar-brand" href="#">Weapon Guide</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Home</a>
+        </li>
 
-  <!-- About Header -->
-  <div class="about-header">
-    <h1>About This Guide</h1>
-    <p class="text-muted">Created by Abdullah Farooq, a passionate gamer and weapons enthusiast, providing detailed stats and tips for top assault rifles.</p>
-  </div>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
 
-  <!-- About Content -->
-  <div class="about-section">
-    <h3>My Introduction</h3>
-    <p>
-      Hi! I am Abdullah Farooq. I love exploring games and weapons in detail.  
-      This guide is designed to provide **complete information about popular assault rifles**, including AKM, M416, SCAR-L, and M16A4.  
-      Each weapon is detailed with stats, effective range, recoil, damage, attachments, and tips to help players improve their gameplay.
-    </p>
+        <li class="nav-item">
+          <a class="nav-link" href="store.html">Store</a>
+        </li>
 
-    <h3 class="mt-4">Weapons Overview</h3>
-    <p>
-      Below is a quick summary of the rifles featured in this guide:
-    </p>
+        <li class="nav-item">
+          <a class="nav-link" href="register.html">Register</a>
+        </li>
 
-    <div class="row weapon-summary g-4">
+        <!-- Gun Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Weapons
+          </a>
 
-      <!-- AKM -->
-      <div class="col-md-6 col-lg-3">
-        <div class="card">
-          <img src="/assests/image/istockphoto-1377851295-612x612.jpg" class="card-img-top" alt="AKM">
-          <div class="card-body text-center">
-            <h5 class="card-title">AKM</h5>
-            <p class="card-text">
-              High damage 7.62 mm rifle for mid-range combat. Powerful but with high recoil. Effective range 100–400m.
-            </p>
-            <a href="akm.html" class="btn btn-primary">View Details</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- M416 -->
-      <div class="col-md-6 col-lg-3">
-        <div class="card">
-          <img src="/assests/image/pexels-specna-arms-306304-889709.jpg" class="card-img-top" alt="M416">
-          <div class="card-body text-center">
-            <h5 class="card-title">M416</h5>
-            <p class="card-text">
-              Versatile 5.56 mm rifle with moderate recoil. Great for close to mid-range combat. Attachments friendly.
-            </p>
-            <a href="m416.html" class="btn btn-primary">View Details</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- SCAR-L -->
-      <div class="col-md-6 col-lg-3">
-        <div class="card">
-          <img src="/assests/image/wp6579724-scar-l-wallpapers.jpg" class="card-img-top" alt="SCAR-L">
-          <div class="card-body text-center">
-            <h5 class="card-title">SCAR-L</h5>
-            <p class="card-text">
-              Reliable 5.56 mm rifle with low to moderate recoil. Suitable for beginners and mid-range fights.
-            </p>
-            <a href="Scarl.html" class="btn btn-primary">View Details</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- M16A4 -->
-      <div class="col-md-6 col-lg-3">
-        <div class="card">
-          <img src="/assests/image/328569.jpg" class="card-img-top" alt="M16A4">
-          <div class="card-body text-center">
-            <h5 class="card-title">M16A4</h5>
-            <p class="card-text">
-              Semi-automatic 5.56 mm rifle with low recoil. Perfect for long-range precision and controlled shots.
-            </p>
-            <a href="m1a4.html" class="btn btn-primary">View Details</a>
-          </div>
-        </div>
-      </div>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="m416.html">M416</a></li>
+            <li><a class="dropdown-item" href="scarl.html">SCAR-L</a></li>
+            <li><a class="dropdown-item" href="akm.html">AKM</a></li>
+            <li><a class="dropdown-item" href="m16a4.html">M16A4</a></li>
+          </ul>
+        </li>
+      </ul>
 
     </div>
+  </nav>
+
+  <div class="container">
+
+    <!-- About Header -->
+    <div class="about-header">
+      <h1>About This Guide</h1>
+      <p class="text-muted">Created by Abdullah Farooq, a passionate gamer and weapons enthusiast, providing detailed
+        stats and tips for top assault rifles.</p>
+    </div>
+
+    <!-- About Content -->
+    <div class="about-section">
+      <h3>My Introduction</h3>
+      <p>
+        Hi! I am Abdullah Farooq. I love exploring games and weapons in detail.
+        This guide is designed to provide **complete information about popular assault rifles**, including AKM, M416,
+        SCAR-L, and M16A4.
+        Each weapon is detailed with stats, effective range, recoil, damage, attachments, and tips to help players
+        improve their gameplay.
+      </p>
+
+      <h3 class="mt-4">Weapons Overview</h3>
+      <p>
+        Below is a quick summary of the rifles featured in this guide:
+      </p>
+
+      <div class="row weapon-summary g-4">
+
+        <!-- AKM -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card">
+            <img src="assests/image/istockphoto-1377851295-612x612.jpg" class="card-img-top" alt="AKM">
+            <div class="card-body text-center">
+              <h5 class="card-title">AKM</h5>
+              <p class="card-text">
+                High damage 7.62 mm rifle for mid-range combat. Powerful but with high recoil. Effective range 100–400m.
+              </p>
+              <a href="akm.html" class="btn btn-primary">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- M416 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card">
+            <img src="assests/image/pexels-specna-arms-306304-889709.jpg" class="card-img-top" alt="M416">
+            <div class="card-body text-center">
+              <h5 class="card-title">M416</h5>
+              <p class="card-text">
+                Versatile 5.56 mm rifle with moderate recoil. Great for close to mid-range combat. Attachments friendly.
+              </p>
+              <a href="m416.html" class="btn btn-primary">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- SCAR-L -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card">
+            <img src="assests/image/wp6579724-scar-l-wallpapers.jpg" class="card-img-top" alt="SCAR-L">
+            <div class="card-body text-center">
+              <h5 class="card-title">SCAR-L</h5>
+              <p class="card-text">
+                Reliable 5.56 mm rifle with low to moderate recoil. Suitable for beginners and mid-range fights.
+              </p>
+              <a href="Scarl.html" class="btn btn-primary">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- M16A4 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card">
+            <img src="assests/image/328569.jpg" class="card-img-top" alt="M16A4">
+            <div class="card-body text-center">
+              <h5 class="card-title">M16A4</h5>
+              <p class="card-text">
+                Semi-automatic 5.56 mm rifle with low recoil. Perfect for long-range precision and controlled shots.
+              </p>
+              <a href="m1a4.html" class="btn btn-primary">View Details</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
   </div>
 
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
