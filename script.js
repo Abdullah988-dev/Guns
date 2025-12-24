@@ -18,11 +18,17 @@ function AddRifle() {
   localStorage.setItem("weapon", JSON.stringify(Allweapon));
   showWeapons();
 
-  document.getElementById("name").value="";
-  document.getElementById("image").value="";
-  document.getElementById("shortDesc").value="";
-  document.getElementById("longDesc").value="";
-  document.getElementById("video").value="";
+  // ✅ INPUTS CLEAR (same IDs)
+  document.getElementById("gunName").value = "";
+  document.getElementById("gunImage").value = "";
+  document.getElementById("shortDesc").value = "";
+  document.getElementById("longDesc").value = "";
+  document.getElementById("videoUrl").value = "";
+
+  // ✅ MODAL CLOSE
+  let modalEl = document.getElementById("AddRifleModal");
+  let modal = bootstrap.Modal.getOrCreateInstance(modalEl);
+  modal.hide();
 
 }
 
@@ -37,7 +43,7 @@ function showWeapons() {
           <h5 class="card-title">${weapon.name}</h5>
           <p class="card-text">${weapon.shortDesc}</p>
           <small>${weapon.longDesc}</small><br>
-          <a href="${weapon.video}" target="_blank" class=" btn btn-primary">Watch Video</a>
+          <a href="${weapon.video}" target="_blank" class="btn btn-primary">Watch Video</a>
         </div>
       </div>
     `;
