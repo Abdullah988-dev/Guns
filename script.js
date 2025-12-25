@@ -1,5 +1,7 @@
-const Allweapon = JSON.parse(localStorage.getItem("weapon")) || [];
+// ✅ Load old weapons
+let Allweapon = JSON.parse(localStorage.getItem("weapon")) || [];
 
+// ✅ ADD RIFLE
 function AddRifle() {
   let name = document.getElementById("gunName").value;
   let image = document.getElementById("gunImage").value;
@@ -7,18 +9,25 @@ function AddRifle() {
   let longDesc = document.getElementById("longDesc").value;
   let video = document.getElementById("videoUrl").value;
 
-  Allweapon.push({
+  // ✅ unique id (delete ke liye)
+  let newWeapon = {
+    id: Date.now(),
     name,
     image,
     shortDesc,
     longDesc,
     video
-  });
+  };
 
+  Allweapon.push(newWeapon);
   localStorage.setItem("weapon", JSON.stringify(Allweapon));
+
   showWeapons();
 
-  // ✅ INPUTS CLEAR (same IDs)
+  // ✅ SUCCESS ALERT
+  alert("Gun added successfully");
+
+  // ✅ CLEAR INPUTS
   document.getElementById("gunName").value = "";
   document.getElementById("gunImage").value = "";
   document.getElementById("shortDesc").value = "";
@@ -29,25 +38,40 @@ function AddRifle() {
   let modalEl = document.getElementById("AddRifleModal");
   let modal = bootstrap.Modal.getOrCreateInstance(modalEl);
   modal.hide();
-
 }
 
+// ✅ SHOW WEAPONS
 function showWeapons() {
-  document.getElementById("output").innerHTML = "";
+  let output = document.getElementById("output");
+  output.innerHTML = +"";
 
   Allweapon.forEach(weapon => {
-    document.getElementById("output").innerHTML += `
+    output.innerHTML += `
       <div class="card mb-3" style="width: 18rem;">
         <img src="${weapon.image}" class="card-img-top">
         <div class="card-body">
           <h5 class="card-title">${weapon.name}</h5>
           <p class="card-text">${weapon.shortDesc}</p>
-          <small>${weapon.longDesc}</small><br>
-          <a href="${weapon.video}" target="_blank" class="btn btn-primary">Watch Video</a>
+          <small>${weapon.longDesc}</small><br><br>
+          <a href="${weapon.video}" target="_blank" class="btn btn-primary btn-sm">Watch Video</a>
+          <button class="btn btn-danger btn-sm ms-2" onclick="deleteWeapon(${weapon.id})">
+            Delete
+          </button>
         </div>
       </div>
     `;
   });
 }
 
+// ✅ DELETE WEAPON
+function deleteWeapon(id) {
+  Allweapon = Allweapon.filter(weapon => weapon.id !== id);
+  localStorage.setItem("weapon", JSON.stringify(Allweapon));
+  showWeapons();
+
+  // ✅ DELETE ALERT
+  alert("Gun removed successfully");
+}
+
+// ✅ PAGE LOAD
 showWeapons();
