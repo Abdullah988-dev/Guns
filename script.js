@@ -43,7 +43,6 @@ function AddRifle() {
 // ✅ SHOW WEAPONS
 function showWeapons() {
   let output = document.getElementById("output");
-  output.innerHTML = +"";
 
   Allweapon.forEach(weapon => {
     output.innerHTML += `
@@ -75,3 +74,36 @@ function deleteWeapon(id) {
 
 // ✅ PAGE LOAD
 showWeapons();
+
+function GunSearch() {
+
+  let searchgun = document.getElementById("GunSearch").value.toLowerCase();
+
+  let filterG11 = Allweapon.filter(weapon =>
+    weapon.name.toLowerCase().includes(searchgun)|
+    ""
+  );
+
+  let output = document.getElementById("output");
+  output.innerHTML = "";
+
+  filterG11.forEach(weapon => {
+    output.innerHTML += `
+      <div class="card mb-3" style="width: 18rem;">
+        <img src="${weapon.image}" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">${weapon.name}</h5>
+          <p class="card-text">${weapon.shortDesc}</p>
+          <small>${weapon.longDesc}</small><br><br>
+          <a href="${weapon.video}" target="_blank" class="btn btn-primary btn-sm">Watch Video</a>
+          <button class="btn btn-danger btn-sm ms-2" onclick="deleteWeapon(${weapon.id})">
+            Delete
+          </button>
+        </div>
+      </div>
+    `;
+  });
+}
+
+document.getElementById("GunSearch").addEventListener("input", GunSearch);
+
