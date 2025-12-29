@@ -101,6 +101,16 @@ function GunSearch() {
           </button>
         </div>
       </div>
+      <div class="col-md-6 col-lg-3" id="akm-ar">
+        <div class="card">
+          <img src="${weapon.image}" alt="AKM" class="card-img-top">
+          <div class="card-body text-center">
+            <h5 class="card-title">${weapon.name}</h5>
+            <p class="card-text">High damage 7.62 mm rifle, powerful for mid-range combat.</p>
+            <a href="akm.html" class="btn btn-primary">View Details</a>
+          </div>
+        </div>
+      </div>
     `;
   });
 }
